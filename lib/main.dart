@@ -33,7 +33,7 @@ class Start extends StatelessWidget {
       appBar: AppBar(
         title: const Text('App'),
       ),
-      body: MediaQuery.of(context).size.width > 400 ? const MobileScreen() : const TabletScreen(),
+      body: MediaQuery.of(context).orientation == Orientation.portrait ? const MobileScreen() : const TabletScreen(),
     );
   }
 }
