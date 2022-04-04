@@ -17,12 +17,21 @@ class _TabletScreenState extends State<TabletScreen> {
   Widget build(BuildContext context) {
     return Row(children: [
       Expanded(
-        child: MobileScreen(
-          onTap: (index) {
-            setState(() {
-              page = index;
-            });
-          },
+        child: Container(
+          decoration: const BoxDecoration(
+            border: Border(
+              right: BorderSide(
+                color: Colors.black,
+              ),
+            ),
+          ),
+          child: MobileScreen(
+            onTap: (index) {
+              setState(() {
+                page = index;
+              });
+            },
+          ),
         ),
       ),
       Expanded(
